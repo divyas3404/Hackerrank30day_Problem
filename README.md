@@ -1,3 +1,3 @@
 # Java_Program
 
-HackerRank Day 30 Challenges
+HackerRank 30 Day Challenges
