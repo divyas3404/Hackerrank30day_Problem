@@ -1,0 +1,46 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        List<String> S=new ArrayList<>();
+        String S1;
+        int T,N;
+        
+        Scanner sc=new Scanner(System.in);
+        T=sc.nextInt();
+        for(int i=0;i<T;i++)
+        {   S.add(sc.next());
+        }
+        
+        for(int i=0;i<T;i++)
+        {
+            S1=S.get(i);
+            N=S1.length();
+            for(int j=0;j<N;j++)
+            {
+                if(j%2==0)
+                {
+                    System.out.print(S1.charAt(j));
+                }
+            }
+            
+            System.out.print(" ");
+            
+            for(int j=0;j<N;j++)
+            {
+                if(j%2!=0)
+                {
+                    System.out.print(S1.charAt(j));
+                }
+            }
+            
+            System.out.print("\n");
+        }
+        
+        
+        
+    }
+}
