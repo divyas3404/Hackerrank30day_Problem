@@ -1,0 +1,45 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
+        int binary[]=new int[32];
+        int i=0,count=0,result=0;
+        
+        
+        while (n>0) {   //Decimal to Binary 
+            binary[i++]=n%2;
+            n=n/2;
+        }
+        
+        for(int j=0;j<binary.length;j++)   //calculating 1's
+        {
+            if(binary[j]==1)
+            {
+                count++;
+                result=Math.max(result, count);
+            }
+            else{
+                count=0;
+            }
+        }
+        
+        System.out.print(result);
+        
+        bufferedReader.close();
+    }
+}
